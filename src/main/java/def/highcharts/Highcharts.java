@@ -10,8 +10,8 @@ import jsweet.util.function.Consumer4;
 import jsweet.util.union.Union3;
 
 /** This class holds all the global functions and variables of the def.highcharts package. */
-public final class Globals {
-	private Globals() {
+public final class Highcharts {
+	private Highcharts() {
 	}
 
 	/**
