@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.jsweet.candies</groupId>
 	<artifactId>highcharts</artifactId>
-	<version>8.1.0-2</version>
+	<version>8.1.0-3</version>
 	<properties>
 		<jsweet.transpiler.version>2.0.0</jsweet.transpiler.version>
 	</properties>

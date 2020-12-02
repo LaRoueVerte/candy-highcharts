@@ -30,7 +30,7 @@ Add the following dependency to the ``pom.xml``:
 <dependency>
 	<groupId>org.jsweet.candies.ext</groupId>
 	<artifactId>highcharts</artifactId>
-	<version>8.1.0-2</version>
+	<version>8.1.0-3</version>
 </dependency>
 ```
 

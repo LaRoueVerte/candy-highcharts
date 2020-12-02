@@ -119,7 +119,7 @@ public abstract class SeriesTooltipOptionsObject extends def.js.Object {
      * flexibility.
      */
     @jsweet.lang.Optional
-    public java.util.function.Function<Point,String> pointFormatter;
+	public java.util.function.Supplier<String> pointFormatter;
     /**
      * (Highstock) Number of decimals in indicator series.
      */
