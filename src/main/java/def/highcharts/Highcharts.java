@@ -3,6 +3,7 @@ package def.highcharts;
 import def.dom.Element;
 import def.dom.Event;
 import def.dom.HTMLElement;
+import def.dom.SVGElement;
 import def.js.Array;
 import def.js.Function;
 import jsweet.util.StringTypes.object;
@@ -726,7 +727,7 @@ public final class Highcharts {
 	 *
 	 * @param prop The property to stop animating. If given, the stop method will stop a single property from animating, while others continue.
 	 */
-	native public static void stop(SVGElement2 el, String prop);
+	native public static void stop(SVGElement el, String prop);
 
 	/**
 	 * Set a timeout if the delay is given, otherwise perform the function synchronously.
@@ -1373,7 +1374,7 @@ public final class Highcharts {
 	 *
 	 * @param prop The property to stop animating. If given, the stop method will stop a single property from animating, while others continue.
 	 */
-	native public static void stop(SVGElement2 el);
+	native public static void stop(SVGElement el);
 
 	/**
 	 * Set a timeout if the delay is given, otherwise perform the function synchronously.
@@ -1551,7 +1552,7 @@ public final class Highcharts {
 	 *
 	 * @param opt Animation options.
 	 */
-	native public static void animate(SVGElement2 el, SVGAttributes params, Partial2<AnimationOptionsObject> opt);
+	native public static void animate(SVGElement el, SVGAttributes params, Partial2<AnimationOptionsObject> opt);
 
 	/**
 	 * The global animate method, which uses Fx to create individual animators.
@@ -1563,7 +1564,7 @@ public final class Highcharts {
 	 *
 	 * @param opt Animation options.
 	 */
-	native public static void animate(SVGElement2 el, CSSObject params, Partial2<AnimationOptionsObject> opt);
+	native public static void animate(SVGElement el, CSSObject params, Partial2<AnimationOptionsObject> opt);
 
 	/**
 	 * Get the animation in object form, where a disabled animation is always returned as `{ duration: 0 }`.
@@ -2157,7 +2158,7 @@ public final class Highcharts {
 	 *
 	 * @param opt Animation options.
 	 */
-	native public static void animate(SVGElement2 el, SVGAttributes params);
+	native public static void animate(SVGElement el, SVGAttributes params);
 
 	/**
 	 * The global animate method, which uses Fx to create individual animators.
@@ -2181,7 +2182,7 @@ public final class Highcharts {
 	 *
 	 * @param opt Animation options.
 	 */
-	native public static void animate(SVGElement2 el, CSSObject params);
+	native public static void animate(SVGElement el, CSSObject params);
 
 	/**
 	 * Set or get an attribute or an object of attributes. To use as a setter, pass a key and a value, or let the second argument be a collection of keys and

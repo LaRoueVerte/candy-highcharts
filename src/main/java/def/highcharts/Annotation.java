@@ -1,5 +1,7 @@
 package def.highcharts;
 
+import def.dom.SVGElement;
+
 /**
  * An annotation class which serves as a container for items like labels or shapes. Created items are positioned on the chart either by linking them to existing
  * points or created mock points
@@ -19,11 +21,12 @@ public class Annotation extends def.js.Object {
 	/**
 	 * The group svg element.
 	 */
-	public SVGElement2 group;
+	public SVGElement group;
 	/**
 	 * The group svg element of the annotation's labels.
 	 */
-	public SVGElement2 labelsGroup;
+
+	public SVGElement labelsGroup;
 	/**
 	 * The options for the annotations.
 	 */
@@ -31,7 +34,7 @@ public class Annotation extends def.js.Object {
 	/**
 	 * The group svg element of the annotation's shapes.
 	 */
-	public SVGElement2 shapesGroup;
+	public SVGElement shapesGroup;
 	/**
 	 * The user options for the annotations.
 	 */

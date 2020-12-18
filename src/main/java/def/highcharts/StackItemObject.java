@@ -1,4 +1,7 @@
 package def.highcharts;
+
+import def.dom.SVGElement;
+
 /**
  * (Highcharts) Stack of data points
  */
@@ -23,7 +26,7 @@ public abstract class StackItemObject extends def.js.Object {
     /**
      * Related SVG element
      */
-    public SVGElement2 label;
+	public SVGElement label;
     /**
      * Related stack options
      */

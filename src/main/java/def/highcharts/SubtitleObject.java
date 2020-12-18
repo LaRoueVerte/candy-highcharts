@@ -1,10 +1,13 @@
 package def.highcharts;
+
+import def.dom.SVGElement;
+
 /**
  * The chart subtitle. The subtitle has an `update` method that allows modifying
  * the options directly or indirectly via `chart.update`.
  */
 @jsweet.lang.Interface
-public abstract class SubtitleObject extends SVGElement2 {
+public abstract class SubtitleObject extends SVGElement {
     /**
      * Modify options for the subtitle.
      *

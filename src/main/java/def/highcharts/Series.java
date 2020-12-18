@@ -1,5 +1,6 @@
 package def.highcharts;
 
+import def.dom.SVGElement;
 import def.js.Array;
 
 @jsweet.lang.Interface
@@ -45,7 +46,7 @@ public class Series<T> extends def.js.Object {
 	 * areas, accessible via `series['zone-area-x']` (where x is a number, starting with 0).
 	 */
 	@jsweet.lang.Optional
-	public SVGElement2 area;
+	public SVGElement area;
 	/**
 	 * Read only. The chart that the series belongs to.
 	 */
@@ -74,7 +75,7 @@ public class Series<T> extends def.js.Object {
 	 * lines, accessible via `series['zone-graph-x']` (where x is a number, starting with 0).
 	 */
 	@jsweet.lang.Optional
-	public SVGElement2 graph;
+	public SVGElement graph;
 	/**
 	 * Contains the series' index in the `Chart.series` array.
 	 */

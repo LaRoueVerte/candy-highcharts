@@ -1,10 +1,13 @@
 package def.highcharts;
+
+import def.dom.SVGElement;
+
 /**
  * The chart title. The title has an `update` method that allows modifying the
  * options directly or indirectly via `chart.update`.
  */
 @jsweet.lang.Interface
-public abstract class TitleObject extends SVGElement2 {
+public abstract class TitleObject extends SVGElement {
     /**
      * Modify options for the title.
      *

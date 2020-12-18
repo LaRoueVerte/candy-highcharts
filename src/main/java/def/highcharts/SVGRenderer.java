@@ -2,6 +2,7 @@ package def.highcharts;
 
 import def.dom.Event;
 import def.dom.HTMLElement;
+import def.dom.SVGElement;
 import def.js.Array;
 import def.js.Function;
 
@@ -45,15 +46,15 @@ public class SVGRenderer extends def.js.Object {
 	/**
 	 * The wrapper for the root `svg` node of the renderer.
 	 */
-	public SVGElement2 boxWrapper;
+	public SVGElement boxWrapper;
 	/**
 	 * A pointer to the `defs` node of the root SVG.
 	 */
-	public SVGElement2 defs;
+	public SVGElement defs;
 	/**
 	 * A pointer to the renderer's associated Element class. The VMLRenderer will have a pointer to VMLElement here.
 	 */
-	public SVGElement2 Element;
+	public SVGElement Element;
 	/**
 	 * A collection of characters mapped to HTML entities. When `useHTML` on an element is true, these entities will be rendered correctly by HTML. In the SVG
 	 * pseudo-HTML, they need to be unescaped back to simple characters, so for example `&lt;` will render as `<`.
@@ -71,7 +72,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 arc(SVGAttributes attribs);
+	native public SVGElement arc(SVGAttributes attribs);
 
 	/**
 	 * Draw and return an arc.
@@ -90,7 +91,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 arc(double x, double y, double r, double innerR, double start, double end);
+	native public SVGElement arc(double x, double y, double r, double innerR, double start, double end);
 
 	/**
 	 * Create a button with preset states.
@@ -118,7 +119,7 @@ public class SVGRenderer extends def.js.Object {
 	 * @return The button element.
 	 */
 	@jsweet.lang.Name("button")
-	native public SVGElement2 buttonCallbackBiFunction(String text, double x, double y, java.util.function.BiFunction<SVGElement2, Event, Boolean> callback,
+	native public SVGElement buttonCallbackBiFunction(String text, double x, double y, java.util.function.BiFunction<SVGElement, Event, Boolean> callback,
 			SVGAttributes normalState, SVGAttributes hoverState, SVGAttributes pressedState, SVGAttributes disabledState, Object shape, Boolean useHTML);
 
 	/**
@@ -128,7 +129,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 circle(SVGAttributes attribs);
+	native public SVGElement circle(SVGAttributes attribs);
 
 	/**
 	 * Draw a circle, wraps the SVG `circle` element.
@@ -141,14 +142,14 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 circle(double x, double y, double r);
+	native public SVGElement circle(double x, double y, double r);
 
 	/**
 	 * Define a clipping rectangle. The clipping rectangle is later applied to SVGElement objects through the SVGElement#clip function.
 	 *
 	 * @return A clipping rectangle.
 	 */
-	native public SVGElement2 clipRect(double x, double y, double width, double height);
+	native public SVGElement clipRect(double x, double y, double width, double height);
 
 	/**
 	 * Create a wrapper for an SVG element. Serves as a factory for SVGElement, but this function is itself mostly called from primitive factories like
@@ -158,7 +159,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated SVGElement.
 	 */
-	native public SVGElement2 createElement(String nodeName);
+	native public SVGElement createElement(String nodeName);
 
 	/**
 	 * Make a straight line crisper by not spilling out to neighbour pixels.
@@ -182,7 +183,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The inserted node.
 	 */
-	native public SVGElement2 definition(SVGDefinitionObject def);
+	native public SVGElement definition(SVGDefinitionObject def);
 
 	/**
 	 * Destroys the renderer and its allocated members.
@@ -212,7 +213,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 g(String name);
+	native public SVGElement g(String name);
 
 	/**
 	 * Returns white for dark colors and black for bright colors.
@@ -240,7 +241,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 image(String src, double x, double y, double width, double height, Function onload);
+	native public SVGElement image(String src, double x, double y, double width, double height, Function onload);
 
 	/**
 	 * Initialize the SVGRenderer. Overridable initializer function that takes the same parameters as the constructor.
@@ -296,7 +297,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated label.
 	 */
-	native public SVGElement2 label(String str, double x, double y, String shape, double anchorX, double anchorY, Boolean useHTML, Boolean baseline,
+	native public SVGElement label(String str, double x, double y, String shape, double anchorX, double anchorY, Boolean useHTML, Boolean baseline,
 			String className);
 
 	/**
@@ -306,7 +307,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 path(Array<?> path);
+	native public SVGElement path(Array<?> path);
 
 	/**
 	 * Draw a path, wraps the SVG `path` element.
@@ -315,7 +316,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 path(SVGAttributes attribs);
+	native public SVGElement path(SVGAttributes attribs);
 
 	/**
 	 * Draw and return a rectangle.
@@ -324,7 +325,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 rect(SVGAttributes attributes);
+	native public SVGElement rect(SVGAttributes attributes);
 
 	/**
 	 * Draw and return a rectangle.
@@ -343,7 +344,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 rect(double x, double y, double width, double height, double r, double strokeWidth);
+	native public SVGElement rect(double x, double y, double width, double height, double r, double strokeWidth);
 
 	/**
 	 * Resize the SVGRenderer#box and re-align all aligned child elements.
@@ -379,7 +380,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @param options Additional options, depending on the actual symbol drawn.
 	 */
-	native public SVGElement2 symbol(String symbol, double x, double y, double width, double height, SymbolOptionsObject options);
+	native public SVGElement symbol(String symbol, double x, double y, double width, double height, SymbolOptionsObject options);
 
 	/**
 	 * Draw text. The text can contain a subset of HTML, like spans and anchors and some basic text styling of these. For more advanced features like border and
@@ -395,7 +396,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The text object.
 	 */
-	native public SVGElement2 text(String str, double x, double y, Boolean useHTML);
+	native public SVGElement text(String str, double x, double y, Boolean useHTML);
 
 	/**
 	 * Allows direct access to the Highcharts rendering layer in order to draw primitive shapes like circles, rectangles, paths or text directly on a chart, or
@@ -514,7 +515,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 arc(double x, double y, double r, double innerR, double start);
+	native public SVGElement arc(double x, double y, double r, double innerR, double start);
 
 	/**
 	 * Draw and return an arc.
@@ -533,7 +534,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 arc(double x, double y, double r, double innerR);
+	native public SVGElement arc(double x, double y, double r, double innerR);
 
 	/**
 	 * Draw and return an arc.
@@ -552,7 +553,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 arc(double x, double y, double r);
+	native public SVGElement arc(double x, double y, double r);
 
 	/**
 	 * Draw and return an arc.
@@ -571,7 +572,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 arc(double x, double y);
+	native public SVGElement arc(double x, double y);
 
 	/**
 	 * Draw and return an arc.
@@ -590,7 +591,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 arc(double x);
+	native public SVGElement arc(double x);
 
 	/**
 	 * Draw and return an arc.
@@ -609,7 +610,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 arc();
+	native public SVGElement arc();
 
 	/**
 	 * Create a button with preset states.
@@ -637,7 +638,7 @@ public class SVGRenderer extends def.js.Object {
 	 * @return The button element.
 	 */
 	@jsweet.lang.Name("button")
-	native public SVGElement2 buttonCallbackBiFunction(String text, double x, double y, java.util.function.BiFunction<SVGElement2, Event, Boolean> callback,
+	native public SVGElement buttonCallbackBiFunction(String text, double x, double y, java.util.function.BiFunction<SVGElement, Event, Boolean> callback,
 			SVGAttributes normalState, SVGAttributes hoverState, SVGAttributes pressedState, SVGAttributes disabledState, Object shape);
 
 	/**
@@ -666,7 +667,7 @@ public class SVGRenderer extends def.js.Object {
 	 * @return The button element.
 	 */
 	@jsweet.lang.Name("button")
-	native public SVGElement2 buttonCallbackBiFunction(String text, double x, double y, java.util.function.BiFunction<SVGElement2, Event, Boolean> callback,
+	native public SVGElement buttonCallbackBiFunction(String text, double x, double y, java.util.function.BiFunction<SVGElement, Event, Boolean> callback,
 			SVGAttributes normalState, SVGAttributes hoverState, SVGAttributes pressedState, SVGAttributes disabledState);
 
 	/**
@@ -695,7 +696,7 @@ public class SVGRenderer extends def.js.Object {
 	 * @return The button element.
 	 */
 	@jsweet.lang.Name("button")
-	native public SVGElement2 buttonCallbackBiFunction(String text, double x, double y, java.util.function.BiFunction<SVGElement2, Event, Boolean> callback,
+	native public SVGElement buttonCallbackBiFunction(String text, double x, double y, java.util.function.BiFunction<SVGElement, Event, Boolean> callback,
 			SVGAttributes normalState, SVGAttributes hoverState, SVGAttributes pressedState);
 
 	/**
@@ -724,7 +725,7 @@ public class SVGRenderer extends def.js.Object {
 	 * @return The button element.
 	 */
 	@jsweet.lang.Name("button")
-	native public SVGElement2 buttonCallbackBiFunction(String text, double x, double y, java.util.function.BiFunction<SVGElement2, Event, Boolean> callback,
+	native public SVGElement buttonCallbackBiFunction(String text, double x, double y, java.util.function.BiFunction<SVGElement, Event, Boolean> callback,
 			SVGAttributes normalState, SVGAttributes hoverState);
 
 	/**
@@ -753,7 +754,7 @@ public class SVGRenderer extends def.js.Object {
 	 * @return The button element.
 	 */
 	@jsweet.lang.Name("button")
-	native public SVGElement2 buttonCallbackBiFunction(String text, double x, double y, java.util.function.BiFunction<SVGElement2, Event, Boolean> callback,
+	native public SVGElement buttonCallbackBiFunction(String text, double x, double y, java.util.function.BiFunction<SVGElement, Event, Boolean> callback,
 			SVGAttributes normalState);
 
 	/**
@@ -782,7 +783,7 @@ public class SVGRenderer extends def.js.Object {
 	 * @return The button element.
 	 */
 	@jsweet.lang.Name("button")
-	native public SVGElement2 buttonCallbackBiFunction(String text, double x, double y, java.util.function.BiFunction<SVGElement2, Event, Boolean> callback);
+	native public SVGElement buttonCallbackBiFunction(String text, double x, double y, java.util.function.BiFunction<SVGElement, Event, Boolean> callback);
 
 	/**
 	 * Draw a circle, wraps the SVG `circle` element.
@@ -791,7 +792,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 circle();
+	native public SVGElement circle();
 
 	/**
 	 * Draw a circle, wraps the SVG `circle` element.
@@ -804,7 +805,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 circle(double x, double y);
+	native public SVGElement circle(double x, double y);
 
 	/**
 	 * Draw a circle, wraps the SVG `circle` element.
@@ -817,35 +818,35 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 circle(double x);
+	native public SVGElement circle(double x);
 
 	/**
 	 * Define a clipping rectangle. The clipping rectangle is later applied to SVGElement objects through the SVGElement#clip function.
 	 *
 	 * @return A clipping rectangle.
 	 */
-	native public SVGElement2 clipRect(double x, double y, double width);
+	native public SVGElement clipRect(double x, double y, double width);
 
 	/**
 	 * Define a clipping rectangle. The clipping rectangle is later applied to SVGElement objects through the SVGElement#clip function.
 	 *
 	 * @return A clipping rectangle.
 	 */
-	native public SVGElement2 clipRect(double x, double y);
+	native public SVGElement clipRect(double x, double y);
 
 	/**
 	 * Define a clipping rectangle. The clipping rectangle is later applied to SVGElement objects through the SVGElement#clip function.
 	 *
 	 * @return A clipping rectangle.
 	 */
-	native public SVGElement2 clipRect(double x);
+	native public SVGElement clipRect(double x);
 
 	/**
 	 * Define a clipping rectangle. The clipping rectangle is later applied to SVGElement objects through the SVGElement#clip function.
 	 *
 	 * @return A clipping rectangle.
 	 */
-	native public SVGElement2 clipRect();
+	native public SVGElement clipRect();
 
 	/**
 	 * Utility to return the baseline offset and total line height from the font size.
@@ -876,7 +877,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 g();
+	native public SVGElement g();
 
 	/**
 	 * Display an image.
@@ -895,7 +896,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 image(String src, double x, double y, double width, double height);
+	native public SVGElement image(String src, double x, double y, double width, double height);
 
 	/**
 	 * Display an image.
@@ -914,7 +915,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 image(String src, double x, double y, double width);
+	native public SVGElement image(String src, double x, double y, double width);
 
 	/**
 	 * Display an image.
@@ -933,7 +934,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 image(String src, double x, double y);
+	native public SVGElement image(String src, double x, double y);
 
 	/**
 	 * Display an image.
@@ -952,7 +953,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 image(String src, double x);
+	native public SVGElement image(String src, double x);
 
 	/**
 	 * Display an image.
@@ -971,7 +972,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 image(String src);
+	native public SVGElement image(String src);
 
 	/**
 	 * Initialize the SVGRenderer. Overridable initializer function that takes the same parameters as the constructor.
@@ -1079,7 +1080,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated label.
 	 */
-	native public SVGElement2 label(String str, double x, double y, String shape, double anchorX, double anchorY, Boolean useHTML, Boolean baseline);
+	native public SVGElement label(String str, double x, double y, String shape, double anchorX, double anchorY, Boolean useHTML, Boolean baseline);
 
 	/**
 	 * Draw a label, which is an extended text element with support for border and background. Highcharts creates a `g` element with a text and a `path` or
@@ -1107,7 +1108,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated label.
 	 */
-	native public SVGElement2 label(String str, double x, double y, String shape, double anchorX, double anchorY, Boolean useHTML);
+	native public SVGElement label(String str, double x, double y, String shape, double anchorX, double anchorY, Boolean useHTML);
 
 	/**
 	 * Draw a label, which is an extended text element with support for border and background. Highcharts creates a `g` element with a text and a `path` or
@@ -1135,7 +1136,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated label.
 	 */
-	native public SVGElement2 label(String str, double x, double y, String shape, double anchorX, double anchorY);
+	native public SVGElement label(String str, double x, double y, String shape, double anchorX, double anchorY);
 
 	/**
 	 * Draw a label, which is an extended text element with support for border and background. Highcharts creates a `g` element with a text and a `path` or
@@ -1163,7 +1164,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated label.
 	 */
-	native public SVGElement2 label(String str, double x, double y, String shape, double anchorX);
+	native public SVGElement label(String str, double x, double y, String shape, double anchorX);
 
 	/**
 	 * Draw a label, which is an extended text element with support for border and background. Highcharts creates a `g` element with a text and a `path` or
@@ -1191,7 +1192,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated label.
 	 */
-	native public SVGElement2 label(String str, double x, double y, String shape);
+	native public SVGElement label(String str, double x, double y, String shape);
 
 	/**
 	 * Draw a label, which is an extended text element with support for border and background. Highcharts creates a `g` element with a text and a `path` or
@@ -1219,7 +1220,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated label.
 	 */
-	native public SVGElement2 label(String str, double x, double y);
+	native public SVGElement label(String str, double x, double y);
 
 	/**
 	 * Draw a label, which is an extended text element with support for border and background. Highcharts creates a `g` element with a text and a `path` or
@@ -1247,7 +1248,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated label.
 	 */
-	native public SVGElement2 label(String str, double x);
+	native public SVGElement label(String str, double x);
 
 	/**
 	 * Draw a path, wraps the SVG `path` element.
@@ -1256,7 +1257,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 path();
+	native public SVGElement path();
 
 	/**
 	 * Draw and return a rectangle.
@@ -1265,7 +1266,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 rect();
+	native public SVGElement rect();
 
 	/**
 	 * Draw and return a rectangle.
@@ -1284,7 +1285,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 rect(double x, double y, double width, double height, double r);
+	native public SVGElement rect(double x, double y, double width, double height, double r);
 
 	/**
 	 * Draw and return a rectangle.
@@ -1303,7 +1304,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 rect(double x, double y, double width, double height);
+	native public SVGElement rect(double x, double y, double width, double height);
 
 	/**
 	 * Draw and return a rectangle.
@@ -1322,7 +1323,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 rect(double x, double y, double width);
+	native public SVGElement rect(double x, double y, double width);
 
 	/**
 	 * Draw and return a rectangle.
@@ -1341,7 +1342,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 rect(double x, double y);
+	native public SVGElement rect(double x, double y);
 
 	/**
 	 * Draw and return a rectangle.
@@ -1360,7 +1361,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 rect(double x);
+	native public SVGElement rect(double x);
 
 	/**
 	 * Resize the SVGRenderer#box and re-align all aligned child elements.
@@ -1389,7 +1390,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @param options Additional options, depending on the actual symbol drawn.
 	 */
-	native public SVGElement2 symbol(String symbol, double x, double y, double width, double height);
+	native public SVGElement symbol(String symbol, double x, double y, double width, double height);
 
 	/**
 	 * Draw a symbol out of pre-defined shape paths from SVGRenderer#symbols. It is used in Highcharts for point makers, which cake a `symbol` option, and label
@@ -1407,7 +1408,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @param options Additional options, depending on the actual symbol drawn.
 	 */
-	native public SVGElement2 symbol(String symbol, double x, double y, double width);
+	native public SVGElement symbol(String symbol, double x, double y, double width);
 
 	/**
 	 * Draw a symbol out of pre-defined shape paths from SVGRenderer#symbols. It is used in Highcharts for point makers, which cake a `symbol` option, and label
@@ -1425,7 +1426,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @param options Additional options, depending on the actual symbol drawn.
 	 */
-	native public SVGElement2 symbol(String symbol, double x, double y);
+	native public SVGElement symbol(String symbol, double x, double y);
 
 	/**
 	 * Draw a symbol out of pre-defined shape paths from SVGRenderer#symbols. It is used in Highcharts for point makers, which cake a `symbol` option, and label
@@ -1443,7 +1444,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @param options Additional options, depending on the actual symbol drawn.
 	 */
-	native public SVGElement2 symbol(String symbol, double x);
+	native public SVGElement symbol(String symbol, double x);
 
 	/**
 	 * Draw a symbol out of pre-defined shape paths from SVGRenderer#symbols. It is used in Highcharts for point makers, which cake a `symbol` option, and label
@@ -1461,7 +1462,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @param options Additional options, depending on the actual symbol drawn.
 	 */
-	native public SVGElement2 symbol(String symbol);
+	native public SVGElement symbol(String symbol);
 
 	/**
 	 * Draw text. The text can contain a subset of HTML, like spans and anchors and some basic text styling of these. For more advanced features like border and
@@ -1477,7 +1478,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The text object.
 	 */
-	native public SVGElement2 text(String str, double x, double y);
+	native public SVGElement text(String str, double x, double y);
 
 	/**
 	 * Draw text. The text can contain a subset of HTML, like spans and anchors and some basic text styling of these. For more advanced features like border and
@@ -1493,7 +1494,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The text object.
 	 */
-	native public SVGElement2 text(String str, double x);
+	native public SVGElement text(String str, double x);
 
 	/**
 	 * Draw text. The text can contain a subset of HTML, like spans and anchors and some basic text styling of these. For more advanced features like border and
@@ -1509,7 +1510,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The text object.
 	 */
-	native public SVGElement2 text(String str);
+	native public SVGElement text(String str);
 
 	/**
 	 * Draw text. The text can contain a subset of HTML, like spans and anchors and some basic text styling of these. For more advanced features like border and
@@ -1525,7 +1526,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The text object.
 	 */
-	native public SVGElement2 text();
+	native public SVGElement text();
 
 	/**
 	 * Create a button with preset states.
@@ -1552,7 +1553,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The button element.
 	 */
-	native public SVGElement2 button(String text, double x, double y, java.util.function.Function<SVGElement2, Boolean> callback, SVGAttributes normalState,
+	native public SVGElement button(String text, double x, double y, java.util.function.Function<SVGElement, Boolean> callback, SVGAttributes normalState,
 			SVGAttributes hoverState, SVGAttributes pressedState, SVGAttributes disabledState, Object shape, Boolean useHTML);
 
 	/**
@@ -1580,7 +1581,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The button element.
 	 */
-	native public SVGElement2 button(String text, double x, double y, java.util.function.Function<SVGElement2, Boolean> callback, SVGAttributes normalState,
+	native public SVGElement button(String text, double x, double y, java.util.function.Function<SVGElement, Boolean> callback, SVGAttributes normalState,
 			SVGAttributes hoverState, SVGAttributes pressedState, SVGAttributes disabledState, Object shape);
 
 	/**
@@ -1608,7 +1609,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The button element.
 	 */
-	native public SVGElement2 button(String text, double x, double y, java.util.function.Function<SVGElement2, Boolean> callback, SVGAttributes normalState,
+	native public SVGElement button(String text, double x, double y, java.util.function.Function<SVGElement, Boolean> callback, SVGAttributes normalState,
 			SVGAttributes hoverState, SVGAttributes pressedState, SVGAttributes disabledState);
 
 	/**
@@ -1636,7 +1637,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The button element.
 	 */
-	native public SVGElement2 button(String text, double x, double y, java.util.function.Function<SVGElement2, Boolean> callback, SVGAttributes normalState,
+	native public SVGElement button(String text, double x, double y, java.util.function.Function<SVGElement, Boolean> callback, SVGAttributes normalState,
 			SVGAttributes hoverState, SVGAttributes pressedState);
 
 	/**
@@ -1664,7 +1665,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The button element.
 	 */
-	native public SVGElement2 button(String text, double x, double y, java.util.function.Function<SVGElement2, Boolean> callback, SVGAttributes normalState,
+	native public SVGElement button(String text, double x, double y, java.util.function.Function<SVGElement, Boolean> callback, SVGAttributes normalState,
 			SVGAttributes hoverState);
 
 	/**
@@ -1692,7 +1693,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The button element.
 	 */
-	native public SVGElement2 button(String text, double x, double y, java.util.function.Function<SVGElement2, Boolean> callback, SVGAttributes normalState);
+	native public SVGElement button(String text, double x, double y, java.util.function.Function<SVGElement, Boolean> callback, SVGAttributes normalState);
 
 	/**
 	 * Create a button with preset states.
@@ -1719,7 +1720,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The button element.
 	 */
-	native public SVGElement2 button(String text, double x, double y, java.util.function.Function<SVGElement2, Boolean> callback);
+	native public SVGElement button(String text, double x, double y, java.util.function.Function<SVGElement, Boolean> callback);
 
 	/**
 	 * Create a button with preset states.
@@ -1747,8 +1748,8 @@ public class SVGRenderer extends def.js.Object {
 	 * @return The button element.
 	 */
 	@jsweet.lang.Name("button")
-	native public SVGElement2 buttonCallbackDictionaryAnyBiFunction(String text, double x, double y,
-			java.util.function.BiFunction<SVGElement2, Dictionary<?>, Boolean> callback, SVGAttributes normalState, SVGAttributes hoverState,
+	native public SVGElement buttonCallbackDictionaryAnyBiFunction(String text, double x, double y,
+			java.util.function.BiFunction<SVGElement, Dictionary<?>, Boolean> callback, SVGAttributes normalState, SVGAttributes hoverState,
 			SVGAttributes pressedState, SVGAttributes disabledState, Object shape, Boolean useHTML);
 
 	/**
@@ -1760,7 +1761,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The font metrics.
 	 */
-	native public FontMetricsObject fontMetrics(double fontSize, SVGElement2 elem);
+	native public FontMetricsObject fontMetrics(double fontSize, SVGElement elem);
 
 	/**
 	 * Utility to return the baseline offset and total line height from the font size.
@@ -1771,7 +1772,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The font metrics.
 	 */
-	native public FontMetricsObject fontMetrics(String fontSize, SVGElement2 elem);
+	native public FontMetricsObject fontMetrics(String fontSize, SVGElement elem);
 
 	/**
 	 * Utility to return the baseline offset and total line height from the font size.
@@ -1821,8 +1822,8 @@ public class SVGRenderer extends def.js.Object {
 	 * @return The button element.
 	 */
 	@jsweet.lang.Name("button")
-	native public SVGElement2 buttonCallbackDictionaryAnyBiFunction(String text, double x, double y,
-			java.util.function.BiFunction<SVGElement2, Dictionary<?>, Boolean> callback, SVGAttributes normalState, SVGAttributes hoverState,
+	native public SVGElement buttonCallbackDictionaryAnyBiFunction(String text, double x, double y,
+			java.util.function.BiFunction<SVGElement, Dictionary<?>, Boolean> callback, SVGAttributes normalState, SVGAttributes hoverState,
 			SVGAttributes pressedState, SVGAttributes disabledState, Object shape);
 
 	/**
@@ -1851,8 +1852,8 @@ public class SVGRenderer extends def.js.Object {
 	 * @return The button element.
 	 */
 	@jsweet.lang.Name("button")
-	native public SVGElement2 buttonCallbackDictionaryAnyBiFunction(String text, double x, double y,
-			java.util.function.BiFunction<SVGElement2, Dictionary<?>, Boolean> callback, SVGAttributes normalState, SVGAttributes hoverState,
+	native public SVGElement buttonCallbackDictionaryAnyBiFunction(String text, double x, double y,
+			java.util.function.BiFunction<SVGElement, Dictionary<?>, Boolean> callback, SVGAttributes normalState, SVGAttributes hoverState,
 			SVGAttributes pressedState, SVGAttributes disabledState);
 
 	/**
@@ -1881,8 +1882,8 @@ public class SVGRenderer extends def.js.Object {
 	 * @return The button element.
 	 */
 	@jsweet.lang.Name("button")
-	native public SVGElement2 buttonCallbackDictionaryAnyBiFunction(String text, double x, double y,
-			java.util.function.BiFunction<SVGElement2, Dictionary<?>, Boolean> callback, SVGAttributes normalState, SVGAttributes hoverState,
+	native public SVGElement buttonCallbackDictionaryAnyBiFunction(String text, double x, double y,
+			java.util.function.BiFunction<SVGElement, Dictionary<?>, Boolean> callback, SVGAttributes normalState, SVGAttributes hoverState,
 			SVGAttributes pressedState);
 
 	/**
@@ -1911,8 +1912,8 @@ public class SVGRenderer extends def.js.Object {
 	 * @return The button element.
 	 */
 	@jsweet.lang.Name("button")
-	native public SVGElement2 buttonCallbackDictionaryAnyBiFunction(String text, double x, double y,
-			java.util.function.BiFunction<SVGElement2, Dictionary<?>, Boolean> callback, SVGAttributes normalState, SVGAttributes hoverState);
+	native public SVGElement buttonCallbackDictionaryAnyBiFunction(String text, double x, double y,
+			java.util.function.BiFunction<SVGElement, Dictionary<?>, Boolean> callback, SVGAttributes normalState, SVGAttributes hoverState);
 
 	/**
 	 * Create a button with preset states.
@@ -1940,8 +1941,8 @@ public class SVGRenderer extends def.js.Object {
 	 * @return The button element.
 	 */
 	@jsweet.lang.Name("button")
-	native public SVGElement2 buttonCallbackDictionaryAnyBiFunction(String text, double x, double y,
-			java.util.function.BiFunction<SVGElement2, Dictionary<?>, Boolean> callback, SVGAttributes normalState);
+	native public SVGElement buttonCallbackDictionaryAnyBiFunction(String text, double x, double y,
+			java.util.function.BiFunction<SVGElement, Dictionary<?>, Boolean> callback, SVGAttributes normalState);
 
 	/**
 	 * Create a button with preset states.
@@ -1969,8 +1970,8 @@ public class SVGRenderer extends def.js.Object {
 	 * @return The button element.
 	 */
 	@jsweet.lang.Name("button")
-	native public SVGElement2 buttonCallbackDictionaryAnyBiFunction(String text, double x, double y,
-			java.util.function.BiFunction<SVGElement2, Dictionary<?>, Boolean> callback);
+	native public SVGElement buttonCallbackDictionaryAnyBiFunction(String text, double x, double y,
+			java.util.function.BiFunction<SVGElement, Dictionary<?>, Boolean> callback);
 
 	/**
 	 * Utility to return the baseline offset and total line height from the font size.
@@ -2003,7 +2004,7 @@ public class SVGRenderer extends def.js.Object {
 	 *
 	 * @return The generated wrapper element.
 	 */
-	native public SVGElement2 path(Object[] path);
+	native public SVGElement path(Object[] path);
 
 	protected SVGRenderer() {
 	}

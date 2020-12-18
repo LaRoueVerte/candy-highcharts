@@ -2,6 +2,7 @@ package def.highcharts;
 
 import def.dom.Event;
 import def.dom.HTMLElement;
+import def.dom.SVGElement;
 import def.js.Array;
 import def.js.Function;
 import jsweet.util.function.Function4;
@@ -56,7 +57,7 @@ public class Chart extends def.js.Object {
 	/**
 	 * The chart's credits label. The label has an `update` method that allows setting new options as per the credits options set.
 	 */
-	public SVGElement2 credits;
+	public SVGElement credits;
 	/**
 	 * Contains the original hovered point.
 	 */

@@ -1,4 +1,7 @@
 package def.highcharts;
+
+import def.dom.SVGElement;
+
 /**
  * The object wrapper for plot lines and plot bands
  */
@@ -10,11 +13,11 @@ public class PlotLineOrBand extends def.js.Object {
     /**
      * SVG element of the label.
      */
-    public SVGElement2 label;
+	public SVGElement label;
     /**
      * SVG element of the plot line or band.
      */
-    public SVGElement2 svgElement;
+	public SVGElement svgElement;
     /**
      * Remove the plot line or band.
      */

@@ -1,6 +1,7 @@
 package def.highcharts;
-import def.js.Array;
 import def.dom.HTMLElement;
+import def.dom.SVGElement;
+import def.js.Array;
 /**
  * Tooltip of a chart.
  */
@@ -66,7 +67,7 @@ public class Tooltip extends def.js.Object {
     /**
      * Creates the Tooltip label element if it does not exist, then returns it.
      */
-    native public SVGElement2 getLabel();
+	native public SVGElement getLabel();
     /**
      * Hides the tooltip with a fade out animation.
      *

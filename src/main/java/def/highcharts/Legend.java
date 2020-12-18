@@ -1,4 +1,5 @@
 package def.highcharts;
+import def.dom.SVGElement;
 import def.js.Array;
 /**
  * The overview of the chart's series. The legend object is instanciated
@@ -26,7 +27,7 @@ public class Legend extends def.js.Object {
     /**
      * SVG element of the legend box.
      */
-    public final SVGElement2 box=null;
+	public final SVGElement box = null;
     /**
      * Chart of this legend.
      */
@@ -34,7 +35,7 @@ public class Legend extends def.js.Object {
     /**
      * SVG group of the legend.
      */
-    public final SVGElement2 group=null;
+	public final SVGElement group = null;
     /**
      * Legend options.
      */
@@ -42,7 +43,7 @@ public class Legend extends def.js.Object {
     /**
      * SVG element of the legend title.
      */
-    public final SVGElement2 title=null;
+	public final SVGElement title = null;
     /**
      * Set the legend item text.
      *

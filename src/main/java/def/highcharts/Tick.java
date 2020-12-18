@@ -1,5 +1,7 @@
 package def.highcharts;
 
+import def.dom.SVGElement;
+
 /**
  * The Tick class.
  */
@@ -28,7 +30,7 @@ public class Tick extends def.js.Object {
 	 * The rendered grid line of the tick.
 	 */
 	@jsweet.lang.Optional
-	public SVGElement2 gridLine;
+	public SVGElement gridLine;
 	/**
 	 * True if the tick is the first one on the axis.
 	 */
@@ -43,12 +45,12 @@ public class Tick extends def.js.Object {
 	 * The rendered text label of the tick.
 	 */
 	@jsweet.lang.Optional
-	public SVGElement2 label;
+	public SVGElement label;
 	/**
 	 * The rendered mark of the tick.
 	 */
 	@jsweet.lang.Optional
-	public SVGElement2 mark;
+	public SVGElement mark;
 	/**
 	 * The logical position of the tick on the axis in terms of axis values.
 	 */
